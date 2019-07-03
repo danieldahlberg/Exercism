@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 public static class ReverseString
 {
@@ -7,12 +8,12 @@ public static class ReverseString
         if (String.IsNullOrWhiteSpace(input))
             return "";
 
-        string returnString = "";
+        StringBuilder stringBuilder = new StringBuilder();
         for (int i = input.Length - 1; i >= 0; i--)
         {
-            returnString += input[i];
+            stringBuilder.Append(input[i]);
         }
 
-        return returnString;
+        return stringBuilder.ToString();
     }
 }
